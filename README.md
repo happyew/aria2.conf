@@ -101,3 +101,13 @@
 ## 声明
 
 本项目使用 [MIT](https://github.com/P3TERX/aria2.conf/blob/master/LICENSE) 开源协议，对于本项复制、修改、发布等行为请遵守相关协议保留所有文件中的版权信息，谢谢合作！
+
+## 备注
+
+用sysvinit
+aria2应放在/etc/init.d/
+
+用systemd
+aria2.service应放在/etc/systemd/system
+
+start_aria2.sh为手动后台启动脚本
