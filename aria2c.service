@@ -1,0 +1,18 @@
+[Unit]
+Description=aria2 - The ultra fast download utility
+
+[Service]
+Restart=on-abnormal
+
+User=ye
+Group=ye
+
+ExecStart=aria2c --conf-path=/home/ye/.aria2/aria2.conf
+ExecReload=/bin/kill -USR1 $MAINPID
+
+KillMode=mixed
+KillSignal=SIGQUIT
+TimeoutStopSec=5s
+
+[Install]
+WantedBy=multi-user.target
